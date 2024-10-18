@@ -1,0 +1,10 @@
+// $Id: config.w32,v 1.1.1.1 2007-11-28 01:15:35 sesser Exp $
+// vim:ft=javascript
+
+ARG_ENABLE("snuffleupagus", "whether to enable snuffleupagus support", "yes");
+
+if (PHP_SNUFFLEUPAGUS == "yes") {
+	EXTENSION("snuffleupagus", "snuffleupagus.c sp_config.c sp_config_utils.c sp_harden_rand.c sp_unserialize.c sp_utils.c sp_disable_xxe.c sp_list.c sp_disabled_functions.c sp_execute.c sp_upload_validation.c sp_cookie_encryption.c sp_network_utils.c tweetnacl.c sp_config_keywords.c sp_var_parser.c sp_var_value.c sp_tree.c sp_pcre_compat.c sp_crypt.c sp_session.c sp_sloppy.c sp_wrapper.c sp_ini.c sp_php_compat.c sp_config_scanner.c sp_ifilter.c");
+	ARG_ENABLE("coverage", "Enable coverage support", "no");
+
+}
